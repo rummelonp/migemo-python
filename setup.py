@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name         = 'migemo',
-    version      = '0.0.1',
+    version      = '0.0.2',
     description  = 'Python Binding for Migemo',
     author       = 'Kazuya Takeshim',
     author_email = 'mail@mitukiii.jp',
