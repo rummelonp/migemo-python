@@ -22,8 +22,8 @@ dict_path = '/usr/local/share/migemo/utf-8/migemo-dict'
 
 m = migemo.Migemo(dict_path)
 
-re_str = m.query('nyan')
-re.search(re_str, 'にゃん')
+re_str = m.query(u'nyan')
+re.search(re_str, u'にゃん')
 ```
 
 ## Copyright
