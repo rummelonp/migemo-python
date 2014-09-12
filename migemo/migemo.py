@@ -13,6 +13,8 @@ class Migemo:
             raise IOError("No such file: '%s'" % dict_path)
 
     def query(self, query):
+        if not isinstance(query, str):
+            query = query.encode()
         re_struct = self._lib.migemo_query(self._migemo_struct, query)
         re_str = self._ffi.string(re_struct)
         self._lib.migemo_release(self._migemo_struct, re_struct)
