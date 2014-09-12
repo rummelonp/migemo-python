@@ -13,11 +13,17 @@ pip install migemo-0.0.1.tar.gz
 
 ```python
 import migemo
+import re
 
-dict_path = '/usr/local/Cellar/cmigemo/20110227/share/migemo/utf-8/migemo-dict'
+## Linux
+dict_path = '/usr/local/share/migemo/utf-8/migemo-dict'
+## OS X
+# dict_path = '/usr/local/Cellar/cmigemo/20110227/share/migemo/utf-8/migemo-dict'
+
 m = migemo.Migemo(dict_path)
-re_str = m.query('a')
-print re_str
+
+re_str = m.query('nyan')
+re.search(re_str, 'にゃん')
 ```
 
 ## Copyright
