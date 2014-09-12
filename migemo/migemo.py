@@ -1,4 +1,6 @@
 import cffi
+import re
+import sys
 
 class Migemo:
     def __init__(self, dict_path):
@@ -31,7 +33,11 @@ unsigned char* migemo_query(migemo* object, const unsigned char* query);
         return ffi
 
     def __load_lib(self, ffi):
-        return ffi.dlopen('libmigemo.dylib')
+        if re.search('darwin', sys.platform):
+            suffix = 'dylib'
+        else:
+            suffix = 'so'
+        return ffi.dlopen('libmigemo.' + suffix)
 
     def __load_migemo(self, lib, dict_path):
         return lib.migemo_open(dict_path)
