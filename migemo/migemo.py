@@ -15,9 +15,9 @@ class Migemo:
     def query(self, query):
         if not isinstance(query, str):
             query = query.encode()
-        re_struct = self._lib.migemo_query(self._migemo_struct, query)
-        re_str = self._ffi.string(re_struct)
-        self._lib.migemo_release(self._migemo_struct, re_struct)
+        re_ptr = self._lib.migemo_query(self._migemo_struct, query)
+        re_str = self._ffi.string(re_ptr)
+        self._lib.migemo_release(self._migemo_struct, re_ptr)
         return re_str
 
     def __setup_ffi(self):
