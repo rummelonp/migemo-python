@@ -1,4 +1,5 @@
 import cffi
+import os
 import re
 import sys
 
@@ -8,6 +9,8 @@ class Migemo:
         self._ffi = self.__setup_ffi()
         self._lib = self.__load_lib(self._ffi)
         self._migemo_struct = self.__load_migemo(self._lib, self.dict_path)
+        if not os.path.exists(dict_path):
+            raise IOError("No such file: '%s'" % dict_path)
 
     def query(self, query):
         re_struct = self._lib.migemo_query(self._migemo_struct, query)
