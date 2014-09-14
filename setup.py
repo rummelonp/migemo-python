@@ -4,7 +4,7 @@ setup(
     name         = 'migemo',
     version      = '0.2.0',
     description  = 'Python Binding for Migemo',
-    author       = 'Kazuya Takeshim',
+    author       = 'Kazuya Takeshima',
     author_email = 'mail@mitukiii.jp',
     license      = 'MIT',
     url          = 'https://github.com/mitukiii/migemo-python',
