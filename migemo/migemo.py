@@ -44,6 +44,8 @@ class Migemo:
     def __init__(self, dict_path):
         if not os.path.exists(dict_path):
             raise IOError("No such file: '%s'" % dict_path)
+        if not isinstance(dict_path, str):
+            dict_path = dict_path.encode()
         self.dict_path = dict_path
         self.migemo_struct = self.lib.migemo_open(self.dict_path)
 

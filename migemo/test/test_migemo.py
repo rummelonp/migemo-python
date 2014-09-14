@@ -12,6 +12,8 @@ class TestMigemo(unittest.TestCase):
     def test_migemo_init(self):
         migemo_utf8 = migemo.Migemo(self.dict_path('utf-8'))
         self.assertTrue(isinstance(migemo_utf8, migemo.Migemo))
+        migemo_utf8 = migemo.Migemo(self.dict_path(u'utf-8'))
+        self.assertTrue(isinstance(migemo_utf8, migemo.Migemo))
         self.assertRaises(IOError, migemo.Migemo, 'invaid-path')
 
     def test_migemo_encoding(self):
