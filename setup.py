@@ -10,7 +10,7 @@ setup(
     url          = 'https://github.com/mitukiii/migemo-python',
     test_suite   = 'migemo.test',
     packages = [
-        'migemo'
+        'migemo',
     ],
     install_requires = [
         'cffi',
@@ -18,6 +18,6 @@ setup(
     classifiers = [
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
-        'Topic :: Text Processing'
+        'Topic :: Text Processing',
     ]
 )
