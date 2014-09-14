@@ -14,6 +14,5 @@ test:
 
 .PHONY: clean
 clean:
-clean:
 	rm -rf *.egg-info MANIFEST build dist
 	find . -name *.pyc -exec rm {} \;
