@@ -5,8 +5,8 @@ Python Binding for Migemo
 ## Installation
 
 ```sh
-curl -L https://github.com/mitukiii/migemo-python/archive/v0.1.0.tar.gz -o migemo-0.1.0.tar.gz
-pip install migemo-0.1.0.tar.gz
+curl -L https://github.com/mitukiii/migemo-python/archive/v0.2.0.tar.gz -o migemo-0.2.0.tar.gz
+pip install migemo-0.2.0.tar.gz
 ```
 
 ## Usage

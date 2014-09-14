@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name         = 'migemo',
-    version      = '0.1.0',
+    version      = '0.2.0',
     description  = 'Python Binding for Migemo',
     author       = 'Kazuya Takeshim',
     author_email = 'mail@mitukiii.jp',
