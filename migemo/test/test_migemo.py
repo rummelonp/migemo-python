@@ -35,6 +35,3 @@ class TestMigemo(unittest.TestCase):
 
         self.assertEqual(re_unicode, migemo_eucjp.query(query_unicode))
         self.assertEqual(re_unicode, migemo_eucjp.query(query_str))
-
-if __name__ == '__main__':
-    unittest.main()
